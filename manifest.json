@@ -1,0 +1,72 @@
+{
+  "manifest_version": 3,
+  "name": "Card Flipper",
+  "version": "1.0",
+  "description": "Check eBay prices for Pokemon cards and track daily profits",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://my-pokemon-price-checker-7497ec7be8ee.herokuapp.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+"content_scripts": [
+  {
+    "matches": [
+      "https://*.ebay.com/*",
+      "https://*.tcgplayer.com/*",
+      "https://*.pokemoncenter.com/*",
+      "https://*.trollandtoad.com/*",
+      "https://*.cardmarket.com/*",
+      "https://*.amazon.com/*",
+      "https://*.coolstuffinc.com/*",
+      "https://*.starcitygames.com/*",
+      "https://*.channelfireball.com/*",
+      "https://*.cardkingdom.com/*",
+      "https://*.pkmncard.com/*",
+      "https://*.pokemon.com/*",
+      "https://*.pokedata.io/*",
+      "https://*.pkmncards.com/*",
+      "https://*.pokellector.com/*",
+      "https://*.bulbapedia.bulbagarden.net/*",
+      "https://*.serebii.net/*",
+      "https://*.pokebeach.com/*",
+      "https://*.pojo.com/*",
+      "https://*.mavin.io/*",
+      "https://*.cardconduit.com/*",
+      "https://*.beckett.com/*",
+      "https://*.psacard.com/*",
+      "https://*.abugames.com/*",
+      "https://*.dacardworld.com/*",
+      "https://*.facebook.com/*",
+      "https://*.reddit.com/*",
+      "https://*.instagram.com/*",
+      "https://*.twitter.com/*",
+      "https://*.tiktok.com/*",
+      "https://*.youtube.com/*",
+      "https://*.twitch.tv/*",
+      "https://*.pokemontcg.io/*",
+      "https://*.cardtrader.com/*",
+      "https://*.pokemarket.net/*",
+      "https://*.pokemonprice.com/*"
+    ],
+    "js": ["content.js"]
+  }
+],
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "Pokemon Card Price Checker"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
